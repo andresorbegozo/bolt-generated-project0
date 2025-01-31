@@ -12,7 +12,7 @@ export default function BusinessSubmissionForm({ onClose }: BusinessSubmissionFo
   const [isCorporate, setIsCorporate] = useState(false);
   const [isIndependent, setIsIndependent] = useState(false);
   const [location, setLocation] = useState('');
-  const [website, setWebsite] = useState('');
+  const [website, setWebsite] = useState('http://');
   const [keywords, setKeywords] = useState('');
   const [description, setDescription] = useState('');
   const [email, setEmail] = useState('');

@@ -52,7 +52,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
         try {
           localStorage.setItem('cookieConsent', language);
         } catch (e) {
-          console.warn('Failed to save cookie preference:', e);
+          console.warn('Failed to save language preference:', e);
         }
       };
 
@@ -277,18 +277,26 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
                 />
               ))}
             </main>
-
-            <footer className="bg-gray-100 border-t border-gray-200 py-8 z-10 relative">
-              <div className="max-w-7xl mx-auto px-4 text-center text-gray-600">
-                <p className="text-sm mb-2">{t('footerTagline')}</p>
-                <p className="text-xs mb-4">{t('footerInfo')}</p>
-                <div className="flex justify-center gap-4">
-                  <Link to="/privacy-policy" className="hover:text-gray-800">{t('privacyPolicy')}</Link>
-                  <Link to="/terms-of-use" className="hover:text-gray-800">{t('termsOfUse')}</Link>
-                  <Link to="/accessibility" className="hover:text-gray-800">{t('accessibility')}</Link>
-                </div>
+          </div>
+          <div className="max-w-7xl mx-auto px-4 mt-4 flex justify-center">
+            <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-7J40549651300342EM6OMQVI" target="_blank" rel="noopener noreferrer">
+              <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" alt="PayPal Subscribe" className="h-32 mx-auto" />
+            </a>
+            <p className="text-center text-sm font-cursive text-gray-700 mt-2">
+              Keep us Online, Support for $1 CAD per month
+            </p>
+          </div>
+          <footer className="bg-gray-100 border-t border-gray-200 py-8 z-10 relative">
+            <div className="max-w-7xl mx-auto px-4 text-center text-gray-600">
+              <p className="text-sm mb-2">{t('footerTagline')}</p>
+              <p className="text-xs mb-4">{t('footerInfo')}</p>
+              <div className="flex justify-center gap-4">
+                <Link to="/privacy-policy" className="hover:text-gray-800">{t('privacyPolicy')}</Link>
+                <Link to="/terms-of-use" className="hover:text-gray-800">{t('termsOfUse')}</Link>
+                <Link to="/accessibility" className="hover:text-gray-800">{t('accessibility')}</Link>
               </div>
-            </footer>
+            </div>
+          </footer>
 
             <LanguageSwitch />
 
