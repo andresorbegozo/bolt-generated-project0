@@ -43,33 +43,19 @@ export default function BusinessSubmissionForm({ onClose }: BusinessSubmissionFo
     setShowCityDropdown(false);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', {
-      companyName,
-      isCorporate,
-      isIndependent,
-      location,
-      website,
-      keywords,
-      description,
-      email
-    });
-    onClose();
-  };
-
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
       <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
         <h2 className="text-xl font-bold mb-4">{t('submitYourBusiness')}</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form name="business-submission" method="POST" data-netlify="true" className="space-y-4">
+          <input type="hidden" name="form-name" value="business-submission" />
           <div>
             <label className="block text-sm font-medium text-gray-700">
               {t('companyName')}
             </label>
             <input
               type="text"
+              name="companyName"
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
               className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
@@ -83,6 +69,7 @@ export default function BusinessSubmissionForm({ onClose }: BusinessSubmissionFo
             <div className="flex items-center gap-2">
               <input
                 type="checkbox"
+                name="isCorporate"
                 checked={isCorporate}
                 onChange={() => setIsCorporate(!isCorporate)}
                 className="rounded border-gray-300 text-red-600 focus:ring-red-500 transition-all duration-200"
@@ -90,6 +77,7 @@ export default function BusinessSubmissionForm({ onClose }: BusinessSubmissionFo
               <span className="text-sm text-gray-700">Corporate</span>
               <input
                 type="checkbox"
+                name="isIndependent"
                 checked={isIndependent}
                 onChange={() => setIsIndependent(!isIndependent)}
                 className="rounded border-gray-300 text-red-600 focus:ring-red-500 transition-all duration-200 ml-4"
@@ -103,6 +91,7 @@ export default function BusinessSubmissionForm({ onClose }: BusinessSubmissionFo
             </label>
             <input
               type="text"
+              name="location"
               placeholder="Search city/town"
               value={location}
               onChange={(e) => {
@@ -133,6 +122,7 @@ export default function BusinessSubmissionForm({ onClose }: BusinessSubmissionFo
             </label>
             <input
               type="url"
+              name="website"
               value={website}
               onChange={(e) => setWebsite(e.target.value)}
               className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
@@ -145,6 +135,7 @@ export default function BusinessSubmissionForm({ onClose }: BusinessSubmissionFo
             </label>
             <input
               type="text"
+              name="keywords"
               value={keywords}
               onChange={(e) => setKeywords(e.target.value)}
               className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
@@ -156,6 +147,7 @@ export default function BusinessSubmissionForm({ onClose }: BusinessSubmissionFo
               {t('shortDescription')}
             </label>
             <textarea
+              name="description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
@@ -169,6 +161,7 @@ export default function BusinessSubmissionForm({ onClose }: BusinessSubmissionFo
             </label>
             <input
               type="email"
+              name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"

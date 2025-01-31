@@ -94,7 +94,7 @@ export default function LocationFilter({
 
   return (
     <div className="mb-8 px-4 md:px-6">
-      <div className="flex flex-wrap gap-3 items-center">
+      <div className="flex flex-wrap gap-3 items-center justify-center">
         <button
           onClick={() => onFilterChange('national')}
           className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${

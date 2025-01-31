@@ -35,7 +35,24 @@ export const translations = {
     // Construction Banner
     underConstruction: 'This website is currently under construction. Some features may be incomplete or unavailable.',
     siteUnderConstruction: 'Site under construction',
-    dismiss: 'Dismiss'
+    dismiss: 'Dismiss',
+
+    // Submission Form
+    submitYourBusiness: 'Submit Your Business',
+    companyName: 'Company Name',
+    businessType: 'Business Type',
+    location: 'Location',
+    website: 'Website',
+    keywords: 'Keywords',
+    shortDescription: 'Short Description',
+    joinNewsletter: 'Join Newsletter',
+    submit: 'Submit',
+
+    // Support Modal
+    supportUs: 'Support Buy Canadian',
+    supportMessage: 'Help keep Buy Canadian active by supporting our code development, website domain and hosting, and newsletter costs.',
+    paypalButtonNotWorking: 'If the button does not work, use this',
+    paypalLink: 'link'
   },
   fr: {
     // En-tête
@@ -73,6 +90,23 @@ export const translations = {
     // Bannière de construction
     underConstruction: 'Ce site web est actuellement en construction. Certaines fonctionnalités peuvent être incomplètes ou indisponibles.',
     siteUnderConstruction: 'Site en construction',
-    dismiss: 'Fermer'
+    dismiss: 'Fermer',
+
+    // Submission Form
+    submitYourBusiness: 'Soumettre Votre Entreprise',
+    companyName: 'Nom de l\'Entreprise',
+    businessType: 'Type d\'Entreprise',
+    location: 'Emplacement',
+    website: 'Site Web',
+    keywords: 'Mots-clés',
+    shortDescription: 'Brève Description',
+    joinNewsletter: 'Rejoindre la Newsletter',
+    submit: 'Soumettre',
+
+    // Support Modal
+    supportUs: 'Soutenez Achetez Canadien',
+    supportMessage: 'Aidez à maintenir Achetez Canadien actif en soutenant notre développement de code, le domaine et l\'hébergement du site web, et les coûts de la newsletter.',
+    paypalButtonNotWorking: 'Si le bouton ne fonctionne pas, utilisez ce',
+    paypalLink: 'lien'
   }
 };

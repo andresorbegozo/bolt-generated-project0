@@ -11,6 +11,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
     import type { BusinessFilter, OwnershipFilter } from '../types';
     import BusinessSubmissionForm from '../components/BusinessSubmissionForm';
     import AnimatedCanadianFlag from '../components/AnimatedCanadianFlag';
+    import SupportModal from '../components/SupportModal';
 
     export default function Home() {
       const { t } = useLanguage();
@@ -34,7 +35,16 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
       const [showFilterDebug, setShowFilterDebug] = useState(false);
       const [showConstructionBanner, setShowConstructionBanner] = useState(true);
       const [showSubmissionForm, setShowSubmissionForm] = useState(false);
+      const [showSupportModal, setShowSupportModal] = useState(false);
+      const [supportModalClosed, setSupportModalClosed] = useState(() => {
+        try {
+          return localStorage.getItem('supportModalClosed') === 'true';
+        } catch {
+          return false;
+        }
+      });
       const bannerRef = useRef<HTMLDivElement>(null);
+      const mainRef = useRef<HTMLDivElement>(null);
 
       const handleAcceptCookies = () => {
         setCookieConsent(true);
@@ -42,7 +52,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
         try {
           localStorage.setItem('cookieConsent', language);
         } catch (e) {
-          console.warn('Failed to save language preference:', e);
+          console.warn('Failed to save cookie preference:', e);
         }
       };
 
@@ -56,6 +66,16 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
 
       const handleCloseSubmissionForm = () => {
         setShowSubmissionForm(false);
+      };
+
+      const handleCloseSupportModal = () => {
+        setShowSupportModal(false);
+        setSupportModalClosed(true);
+        try {
+          localStorage.setItem('supportModalClosed', 'true');
+        } catch (e) {
+          console.warn('Failed to save support modal preference:', e);
+        }
       };
 
       useEffect(() => {
@@ -73,6 +93,23 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
           document.removeEventListener('mousedown', handleOutsideClick);
         };
       }, [showConstructionBanner]);
+
+      useEffect(() => {
+        const handleScroll = () => {
+          if (mainRef.current && !supportModalClosed) {
+            const scrollPosition = window.scrollY;
+            const mainHeight = mainRef.current.offsetHeight;
+            const windowHeight = window.innerHeight;
+            
+            if (scrollPosition > (mainHeight - windowHeight) / 2) {
+              setShowSupportModal(true);
+            }
+          }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, [supportModalClosed]);
 
       const filteredCategories = useMemo(() => {
         let filtered = categories;
@@ -151,7 +188,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
           ...cat,
           stores: cat.stores.filter(store => store)
         }));
-      }, [selectedCategory, selectedFilter, postalCode, citySearch, businessFilter, ownershipFilter]);
+      }, [selectedCategory, selectedFilter, postalCode, citySearch, businessFilter, ownershipFilter, supportModalClosed]);
 
       return (
         <>
@@ -209,7 +246,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
             <div className="max-w-7xl mx-auto px-4 mt-4 flex justify-center">
               <button
                 onClick={handleOpenSubmissionForm}
-                className="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors duration-200 mx-1"
+                className="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors duration-200 mx-1 font-cursive"
               >
                 {t('submitYourBusiness')}
               </button>
@@ -231,7 +268,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
               onCitySearchChange={setCitySearch}
             />
 
-            <main className="max-w-7xl mx-auto pb-16 relative z-10">
+            <main ref={mainRef} className="max-w-7xl mx-auto pb-16 relative z-10">
               {filteredCategories.map(category => (
                 <CategoryGrid
                   key={category.id}
@@ -322,6 +359,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
             </button>
           </div>
           {showSubmissionForm && <BusinessSubmissionForm onClose={handleCloseSubmissionForm} />}
+          {showSupportModal && showSupportModal && <SupportModal onClose={handleCloseSupportModal} />}
         </>
       );
     }
