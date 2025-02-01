@@ -1,4 +1,6 @@
-export const beautyStores = [
+import { Store } from '../../types';
+
+export const beautyStores: Store[] = [
   {
     id: 'beauty-deciem',
     name: 'DECIEM',
@@ -7,7 +9,10 @@ export const beautyStores = [
     image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800',
     location: 'Toronto, ON',
     isCorporate: true,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false
   },
   {
     id: 'beauty-lise-watier',
@@ -17,7 +22,10 @@ export const beautyStores = [
     image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=800',
     location: 'Montreal, QC',
     isCorporate: false,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false
   },
   {
     id: 'beauty-marcelle',
@@ -27,7 +35,10 @@ export const beautyStores = [
     image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=800',
     location: 'Montreal, QC',
     isCorporate: false,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false
   },
   {
     id: 'beauty-vasanti',
@@ -37,7 +48,10 @@ export const beautyStores = [
     image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=800',
     location: 'Mississauga, ON',
     isCorporate: false,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false
   },
   {
     id: 'beauty-consonant',
@@ -47,7 +61,10 @@ export const beautyStores = [
     image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800',
     location: 'Toronto, ON',
     isCorporate: false,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false
   },
   {
     id: 'beauty-graydon',
@@ -57,7 +74,10 @@ export const beautyStores = [
     image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=800',
     location: 'Toronto, ON',
     isCorporate: false,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false
   },
   {
     id: 'beauty-province-apothecary',
@@ -67,6 +87,9 @@ export const beautyStores = [
     image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800',
     location: 'Toronto, ON',
     isCorporate: false,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false
   }
 ];

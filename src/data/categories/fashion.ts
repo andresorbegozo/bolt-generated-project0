@@ -290,7 +290,46 @@ import { Store } from '../../types';
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
         isForeignMajorityInvested: false
-      }
+      },
+      {
+        id: 'fashion-sheertex',
+        name: 'Sheertex',
+        description: 'Montreal-based hosiery company known for its durable tights.',
+        url: 'https://www.sheertex.com',
+        image: 'https://images.unsplash.com/photos/1ddol8rgUH8',
+        location: 'Montreal, QC',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
+      },
+      {
+        id: 'fashion-m0851',
+        name: 'M0851',
+        description: 'Montreal-based leather goods and apparel company.',
+        url: 'https://m0851.com',
+        image: 'https://images.unsplash.com/photos/1ddol8rgUH8',
+        location: 'Montreal, QC',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
+      },
+      {
+        id: 'fashion-opelle',
+        name: 'Opelle',
+        description: 'Toronto-based leather goods company.',
+        url: 'https://opellecreative.com',
+        image: 'https://images.unsplash.com/photos/3OZrQ6g4zVk',
+        location: 'Toronto, ON',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
+      },
     ];
 
-    fashionStores.push(...newFashionStores);
+    fashionStores.push(...newFashionStores.filter(store => !existingFashionStoreNames.has(store.name.toLowerCase())));

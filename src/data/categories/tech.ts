@@ -101,7 +101,7 @@ import { Store } from '../../types';
         name: '401 Games',
         description: 'A Toronto-based retailer of board games, card games, and tabletop games.',
         url: 'https://www.401games.ca',
-        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk',
+        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk?auto=format&fit=crop&q=80&w=800',
         location: 'Toronto, ON',
         isCorporate: true,
         isFranchise: false,
@@ -114,7 +114,7 @@ import { Store } from '../../types';
         name: 'Imaginaire',
         description: 'A Quebec City-based retailer of board games, card games, and tabletop games.',
         url: 'https://imaginaire.com',
-        image: 'https://images.unsplash.com/photo-1ddol8rgUH8',
+        image: 'https://images.unsplash.com/photo-1ddol8rgUH8?auto=format&fit=crop&q=80&w=800',
         location: 'Quebec City, QC',
         isCorporate: true,
         isFranchise: false,
@@ -124,4 +124,4 @@ import { Store } from '../../types';
       }
     ];
 
-    techStores.push(...newTechStores);
+    techStores.push(...newTechStores.filter(store => !existingTechStoreNames.has(store.name.toLowerCase())));

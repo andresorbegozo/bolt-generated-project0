@@ -1,7 +1,5 @@
 import { Store } from '../../types';
 
-    const existingEntertainmentStoreNames = new Set(entertainmentStores.map(store => store.name.toLowerCase()));
-
     const newEntertainmentStores: Store[] = [
       {
         id: 'entertainment-sunrise',
@@ -29,7 +27,7 @@ import { Store } from '../../types';
         isCanadianMajorityInvested: true,
         isForeignMajorityInvested: false
       },
-        {
+      {
         id: 'entertainment-sunrise-updated',
         name: 'Sunrise Records',
         description: 'A Canadian music retailer that expanded by acquiring former HMV locations, focusing on vinyl, CDs, and pop-culture merchandise.',
@@ -44,7 +42,8 @@ import { Store } from '../../types';
       }
     ];
 
-    export const entertainmentStores: Store[] = [
-      ...entertainmentStores,
+    const existingEntertainmentStoreNames = new Set(newEntertainmentStores.map(store => store.name.toLowerCase()));
+
+    export const entertainmentStores = [
       ...newEntertainmentStores.filter(store => !existingEntertainmentStoreNames.has(store.name.toLowerCase()))
     ];

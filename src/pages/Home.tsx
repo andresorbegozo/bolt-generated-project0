@@ -8,10 +8,11 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
     import LanguageSwitch from '../components/LanguageSwitch';
     import { useLanguage } from '../contexts/LanguageContext';
     import { categories } from '../data/categories';
-    import type { BusinessFilter, OwnershipFilter } from '../types';
+    import type { BusinessFilter, OwnershipFilter, Store } from '../types';
     import BusinessSubmissionForm from '../components/BusinessSubmissionForm';
     import AnimatedCanadianFlag from '../components/AnimatedCanadianFlag';
     import SupportModal from '../components/SupportModal';
+    import { groceryStores } from '../data/categories/groceryStores';
 
     export default function Home() {
       const { t } = useLanguage();
@@ -145,7 +146,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
           }));
         }
 
-        if (businessFilter !== 'all') {
+        if (businessFilter !== 'all' && businessFilter !== 'groceries') {
           filtered = filtered.map(cat => ({
             ...cat,
             stores: cat.stores.filter(store => {
@@ -189,6 +190,17 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
           stores: cat.stores.filter(store => store)
         }));
       }, [selectedCategory, selectedFilter, postalCode, citySearch, businessFilter, ownershipFilter, supportModalClosed]);
+
+      const displayStores = useMemo(() => {
+        if (businessFilter === 'groceries') {
+          return [{
+            id: 'groceries',
+            title: 'Groceries',
+            stores: groceryStores.filter(store => !store.url.includes('wikipedia.org'))
+          }]
+        }
+        return filteredCategories;
+      }, [filteredCategories, businessFilter]);
 
       return (
         <>
@@ -269,7 +281,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
             />
 
             <main ref={mainRef} className="max-w-7xl mx-auto pb-16 relative z-10">
-              {filteredCategories.map(category => (
+              {displayStores.map(category => (
                 <CategoryGrid
                   key={category.id}
                   title={category.title}
@@ -278,10 +290,28 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
               ))}
             </main>
           </div>
-          <div className="max-w-7xl mx-auto px-4 mt-4 flex justify-center">
-            <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-7J40549651300342EM6OMQVI" target="_blank" rel="noopener noreferrer">
-              <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" alt="PayPal Subscribe" className="h-32 mx-auto" />
-            </a>
+          <div className="max-w-7xl mx-auto px-4 mt-4 flex justify-center flex-col items-center">
+            <div id="paypal-button-container-P-7J40549651300342EM6OMQVI" className="mb-1"></div>
+            <script src="https://www.paypal.com/sdk/js?client-id=AVHy4nMgWnhKv0Csh5Gf6T20CAZRfwR-FaMlhdq7reeysGkldRbBkYyTo3pVyDD1WGjxj3IFvocIMdo7&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+            <script dangerouslySetInnerHTML={{__html: `
+              paypal.Buttons({
+                  style: {
+                      shape: 'rect',
+                      color: 'gold',
+                      layout: 'vertical',
+                      label: 'subscribe'
+                  },
+                  createSubscription: function(data, actions) {
+                    return actions.subscription.create({
+                      /* Creates the subscription */
+                      plan_id: 'P-7J40549651300342EM6OMQVI'
+                    });
+                  },
+                  onApprove: function(data, actions) {
+                    alert(data.subscriptionID); // You can add optional success message for the subscriber here
+                  }
+              }).render('#paypal-button-container-P-7J40549651300342EM6OMQVI'); // Renders the PayPal button
+            `}} />
             <p className="text-center text-sm font-cursive text-gray-700 mt-2">
               Keep us Online, Support for $1 CAD per month
             </p>
@@ -365,7 +395,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
             >
               <Bug className="w-4 h-4 text-gray-600" />
             </button>
-          </div>
+          
           {showSubmissionForm && <BusinessSubmissionForm onClose={handleCloseSubmissionForm} />}
           {showSupportModal && showSupportModal && <SupportModal onClose={handleCloseSupportModal} />}
         </>

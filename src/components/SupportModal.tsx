@@ -16,7 +16,7 @@ export default function SupportModal({ onClose }: SupportModalProps) {
           {t('supportMessage')}
         </p>
         <div id="paypal-button-container-P-7J40549651300342EM6OMQVI" className="flex justify-center mb-4"></div>
-        <script src="https://www.paypal.com/sdk/js?client-id=AVHy4nMgWnhKv0Csh5Gf6T2OCAZRfwR-FaMlhdq7reeysGkldRbBkYyTo3pVyDD1WGjxj3IFvocIMdo7&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=AVHy4nMgWnhKv0Csh5Gf6T20CAZRfwR-FaMlhdq7reeysGkldRbBkYyTo3pVyDD1WGjxj3IFvocIMdo7&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
         <script dangerouslySetInnerHTML={{__html: `
           paypal.Buttons({
               style: {
@@ -36,10 +36,8 @@ export default function SupportModal({ onClose }: SupportModalProps) {
               }
           }).render('#paypal-button-container-P-7J40549651300342EM6OMQVI'); // Renders the PayPal button
         `}} />
-        <div className="text-center text-sm text-gray-500 mb-4">
-          <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-7J40549651300342EM6OMQVI" target="_blank" rel="noopener noreferrer">
-            <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" alt="PayPal Subscribe" className="h-32 mx-auto" />
-          </a>
+        <div className="text-center text-sm font-cursive text-gray-700 mt-2">
+          <p className="mb-1">Keep us Online, Support for $1 CAD per month</p>
         </div>
         <div className="flex justify-end">
           <button

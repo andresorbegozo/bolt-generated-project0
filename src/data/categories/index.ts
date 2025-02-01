@@ -1,26 +1,27 @@
-import { gasolineStores } from './gasoline';
-    import { beautyStores } from './beauty';
-    import { luxuryStores } from './luxury';
-    import { fashionStores } from './fashion';
-    import { foodStores } from './food';
-    import { techStores } from './tech';
-    import { financeStores } from './finance';
-    import { mediaStores } from './media';
-    import { retailStores } from './retail';
-    import { transportationStores } from './transportation';
-    import { homeStores } from './home';
-    import { cannabisStores } from './cannabis';
-    import { alcoholStores } from './alcohol';
-    import { restaurantStores } from './restaurants';
-    import { bookStores } from './bookstores';
-    import { toyStores } from './toystores';
-    import { petStores } from './petstores';
-    import { superStores } from './superstores';
-    import { sportsStores } from './sports';
-    import { entertainmentStores } from './entertainment';
-    import { pharmacyStores } from './pharmacies';
-    import { rideshareStores } from './rideshare';
-    import { homegoodsStores } from './homegoods';
+import { gasolineStores } from './gasoline.ts';
+    import { beautyStores } from './beauty.ts';
+    import { luxuryStores } from './luxury.ts';
+    import { fashionStores } from './fashion.ts';
+    import { foodStores } from './food.ts';
+    import { techStores } from './tech.ts';
+    import { financeStores } from './finance.ts';
+    import { mediaStores } from './media.ts';
+    import { retailStores } from './retail.ts';
+    import { transportationStores } from './transportation.ts';
+    import { homeStores } from './home.ts';
+    import { cannabisStores } from './cannabis.ts';
+    import { alcoholStores } from './alcohol.ts';
+    import { restaurantStores } from './restaurants.ts';
+    import { bookStores } from './bookstores.ts';
+    import { toyStores } from './toystores.ts';
+    import { petStores } from './petstores.ts';
+    import { superStores } from './superstores.ts';
+    import { sportsStores } from './sports.ts';
+    import { entertainmentStores } from './entertainment.ts';
+    import { pharmacyStores } from './pharmacies.ts';
+    import { rideshareStores } from './rideshare.ts';
+    import { homegoodsStores } from './homegoods.ts';
+    import { groceryStores } from './groceryStores.ts';
 
     // Export individual categories for direct access
     export {
@@ -46,7 +47,8 @@ import { gasolineStores } from './gasoline';
       alcoholStores,
       cannabisStores,
       pharmacyStores,
-      rideshareStores
+      rideshareStores,
+      groceryStores
     };
 
     // Create the categories array with all stores

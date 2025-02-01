@@ -18,5 +18,5 @@ export interface Category {
   stores: Store[];
 }
 
-export type BusinessFilter = 'all' | 'corporate-franchise' | 'independent';
+export type BusinessFilter = 'all' | 'corporate-franchise' | 'independent' | 'groceries';
 export type OwnershipFilter = 'all' | 'canadian-owned' | 'canadian-majority' | 'foreign-majority';

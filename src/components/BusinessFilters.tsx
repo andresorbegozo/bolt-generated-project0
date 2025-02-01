@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Home, Store } from 'lucide-react';
+import { Building2, Home, Store, ShoppingBag } from 'lucide-react';
 import type { BusinessFilter, OwnershipFilter } from '../types';
 
 interface BusinessFiltersProps {
@@ -65,19 +65,23 @@ export default function BusinessFilters({
             <div
               className="absolute transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] bg-gradient-to-r from-red-500 to-red-600 rounded-xl"
               style={{
-                width: '33.333333%',
+                width: businessFilter === 'groceries' ? '25%' : 'calc(100% / 4)',
                 height: 'calc(100% - 12px)',
                 top: '6px',
                 left: businessFilter === 'all' 
                   ? '6px' 
                   : businessFilter === 'corporate-franchise' 
-                    ? '33.333333%' 
-                    : '66.666667%',
+                    ? '25%'
+                    : businessFilter === 'independent'
+                      ? '50%'
+                      : '75%',
                 transform: businessFilter === 'corporate-franchise' 
                   ? 'translateX(6px)' 
                   : businessFilter === 'independent' 
-                    ? 'translateX(12px)' 
-                    : 'translateX(0)',
+                    ? 'translateX(12px)'
+                    : businessFilter === 'groceries'
+                      ? 'translateX(18px)'
+                      : 'translateX(0)',
                 boxShadow: '0 4px 12px -2px rgba(239, 68, 68, 0.3)'
               }}
             />
@@ -123,6 +127,19 @@ export default function BusinessFilters({
                 businessFilter === 'independent' ? 'scale-110' : ''
               }`} />
               <span className="whitespace-nowrap">Local</span>
+            </button>
+            <button
+              onClick={() => onBusinessFilterChange('groceries')}
+              className={`relative flex-1 flex items-center justify-center gap-1.5 px-2 py-2.5 text-xs sm:text-sm font-medium rounded-xl transition-all duration-300 ${
+                businessFilter === 'groceries'
+                  ? 'text-white scale-105'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              <ShoppingBag className={`w-4 h-4 transition-transform duration-300 ${
+                businessFilter === 'groceries' ? 'scale-110' : ''
+              }`} />
+              <span className="whitespace-nowrap">Groceries</span>
             </button>
           </div>
         </div>

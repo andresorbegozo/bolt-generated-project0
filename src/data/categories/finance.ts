@@ -20,4 +20,4 @@ import { Store } from '../../types';
       }
     ];
 
-    financeStores.push(...newFinanceStores);
+    financeStores.push(...newFinanceStores.filter(store => !existingFinanceStoreNames.has(store.name.toLowerCase())));

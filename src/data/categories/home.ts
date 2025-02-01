@@ -290,7 +290,20 @@ import { Store } from '../../types';
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
         isForeignMajorityInvested: false
+      },
+      {
+        id: 'home-point-zero',
+        name: 'Point Zero',
+        description: 'Montreal-based clothing retailer',
+        url: 'https://www.pointzero.ca',
+        image: 'https://unsplash.com/photos/1ddol8rgUH8',
+        location: 'Montreal, Quebec',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
       }
     ];
 
-    homeStores.push(...newHomeStores);
+    homeStores.push(...newHomeStores.filter(store => !existingHomeStoreNames.has(store.name.toLowerCase())));
