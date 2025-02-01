@@ -1,9 +1,8 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
-    import { MapPin, ExternalLink, X, Construction, ChevronLeft, ChevronRight, Bug, ShoppingBag, MapPinIcon } from 'lucide-react';
+    import { MapPin, ExternalLink, X, Construction, ChevronLeft, ChevronRight, ShoppingBag, MapPinIcon } from 'lucide-react';
     import { Link } from 'react-router-dom';
     import CategoryGrid from '../components/CategoryGrid';
     import LocationFilter from '../components/LocationFilter';
-    import FilterDebugOverlay from '../components/FilterDebugOverlay';
     import BusinessFilters from '../components/BusinessFilters';
     import LanguageSwitch from '../components/LanguageSwitch';
     import { useLanguage } from '../contexts/LanguageContext';
@@ -30,10 +29,6 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
       const [citySearch, setCitySearch] = useState('');
       const [businessFilter, setBusinessFilter] = useState<BusinessFilter>('all');
       const [ownershipFilter, setOwnershipFilter] = useState<OwnershipFilter>('canadian-owned');
-      const [showDebug, setShowDebug] = useState(false);
-      const [showCategoryDebug, setShowCategoryDebug] = useState(false);
-      const [showLoadingDebug, setShowLoadingDebug] = useState(false);
-      const [showFilterDebug, setShowFilterDebug] = useState(false);
       const [showConstructionBanner, setShowConstructionBanner] = useState(true);
       const [showSubmissionForm, setShowSubmissionForm] = useState(false);
       const [showSupportModal, setShowSupportModal] = useState(false);
@@ -193,11 +188,18 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
 
       const displayStores = useMemo(() => {
         if (businessFilter === 'groceries') {
-          return [{
-            id: 'groceries',
-            title: 'Groceries',
-            stores: groceryStores.filter(store => !store.url.includes('wikipedia.org'))
-          }]
+          const groceryCategories = {};
+          groceryStores.forEach(store => {
+            if (!groceryCategories[store.type]) {
+              groceryCategories[store.type] = [];
+            }
+            groceryCategories[store.type].push(store);
+          });
+          return Object.entries(groceryCategories).map(([type, stores]) => ({
+            id: type,
+            title: type,
+            stores: stores.filter(store => !store.url.includes('wikipedia.org'))
+          }));
         }
         return filteredCategories;
       }, [filteredCategories, businessFilter]);
@@ -329,73 +331,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
           </footer>
 
             <LanguageSwitch />
-
-            {showDebug && (
-              <div className="fixed bottom-4 left-4 bg-white p-4 rounded-lg shadow-lg z-50 max-w-md text-sm">
-                <button onClick={() => setShowDebug(false)}>Close Debug</button>
-                <pre className="text-xs overflow-auto max-h-[60vh]">
-                  {JSON.stringify({ selectedFilter, postalCode, citySearch, businessFilter, ownershipFilter, selectedCategory }, null, 2)}
-                </pre>
-              </div>
-            )}
-
-            {showCategoryDebug && (
-              <div className="fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg z-50 max-w-md text-sm">
-                <button onClick={() => setShowCategoryDebug(false)}>Close Category Debug</button>
-                <pre className="text-xs overflow-auto max-h-[60vh]">
-                  {JSON.stringify(categories, null, 2)}
-                </pre>
-              </div>
-            )}
-
-            {showLoadingDebug && (
-              <div className="fixed top-4 right-4 bg-white p-4 rounded-lg shadow-lg z-50 max-w-md text-sm">
-                <button onClick={() => setShowLoadingDebug(false)}>Close Loading Debug</button>
-                <pre className="text-xs overflow-auto max-h-[60vh]">
-                  {JSON.stringify(categories.map(cat => ({
-                    id: cat.id,
-                    title: cat.title,
-                    storeCount: cat.stores.length
-                  })), null, 2)}
-                </pre>
-              </div>
-            )}
-
-            {showFilterDebug && (
-              <FilterDebugOverlay
-                selectedFilter={selectedFilter}
-                postalCode={postalCode}
-                citySearch={citySearch}
-                selectedCategory={selectedCategory}
-                businessFilter={businessFilter}
-              />
-            )}
-
-            <button
-              onClick={() => setShowDebug(!showDebug)}
-              className="fixed bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg hover:shadow-xl transition-all z-50"
-            >
-              <Bug className="w-4 h-4 text-gray-600" />
-            </button>
-            <button
-              onClick={() => setShowCategoryDebug(!showCategoryDebug)}
-              className="fixed bottom-4 left-16 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg hover:shadow-xl transition-all z-50"
-            >
-              <Bug className="w-4 h-4 text-gray-600" />
-            </button>
-            <button
-              onClick={() => setShowLoadingDebug(!showLoadingDebug)}
-              className="fixed bottom-4 left-28 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg hover:shadow-xl transition-all z-50"
-            >
-              <Bug className="w-4 h-4 text-gray-600" />
-            </button>
-            <button
-              onClick={() => setShowFilterDebug(!showFilterDebug)}
-              className="fixed bottom-4 left-40 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg hover:shadow-xl transition-all z-50"
-            >
-              <Bug className="w-4 h-4 text-gray-600" />
-            </button>
-          
+          </div>
           {showSubmissionForm && <BusinessSubmissionForm onClose={handleCloseSubmissionForm} />}
           {showSupportModal && showSupportModal && <SupportModal onClose={handleCloseSupportModal} />}
         </>
