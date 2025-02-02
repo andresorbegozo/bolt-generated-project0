@@ -1,22 +1,23 @@
 export interface Store {
-  id: string;
-  name: string;
-  description: string;
-  url: string;
-  image: string;
-  location: string;
-  isCorporate: boolean;
-  isFranchise: boolean;
-  isCanadianOwned: boolean;
-  isCanadianMajorityInvested: boolean;
-  isForeignMajorityInvested: boolean;
-}
+      id: string;
+      name: string;
+      description: string;
+      url: string;
+      image: string;
+      location: string;
+      isCorporate: boolean;
+      isFranchise: boolean;
+      isCanadianOwned: boolean;
+      isCanadianMajorityInvested: boolean;
+      isForeignMajorityInvested: boolean;
+      type?: string;
+    }
 
-export interface Category {
-  id: string;
-  title: string;
-  stores: Store[];
-}
+    export interface Category {
+      id: string;
+      title: string;
+      stores: Store[];
+    }
 
-export type BusinessFilter = 'all' | 'corporate-franchise' | 'independent' | 'groceries';
-export type OwnershipFilter = 'all' | 'canadian-owned' | 'canadian-majority' | 'foreign-majority';
+    export type BusinessFilter = 'all' | 'corporate-franchise' | 'independent' | 'groceries';
+    export type OwnershipFilter = 'all' | 'canadian-owned' | 'canadian-majority' | 'foreign-majority';

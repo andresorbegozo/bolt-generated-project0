@@ -331,7 +331,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
           </footer>
 
             <LanguageSwitch />
-          </div>
+          
           {showSubmissionForm && <BusinessSubmissionForm onClose={handleCloseSubmissionForm} />}
           {showSupportModal && showSupportModal && <SupportModal onClose={handleCloseSupportModal} />}
         </>
