@@ -21,7 +21,7 @@ import SearchBar from '../components/SearchBar';
 import ProductGrid from '../components/ProductGrid';
 import { supermarketStores } from '../data/categories/supermarketStores';
 import { foodAndBeverageStores } from '../data/categories/food';
-import BarcodeScannerModal from '../components/BarcodeScannerModal';
+import ProductScannerModal from '../components/BarcodeScannerModal';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -52,7 +52,7 @@ export default function Home() {
   const bannerRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [showBarcodeScanner, setShowBarcodeScanner] = useState(false);
+  const [showProductScanner, setShowProductScanner] = useState(false);
 
   const handleAcceptCookies = () => {
     setCookieConsent(true);
@@ -86,12 +86,12 @@ export default function Home() {
     }
   };
 
-  const handleOpenBarcodeScanner = () => {
-    setShowBarcodeScanner(true);
+  const handleOpenProductScanner = () => {
+    setShowProductScanner(true);
   };
 
-  const handleCloseBarcodeScanner = () => {
-    setShowBarcodeScanner(false);
+  const handleCloseProductScanner = () => {
+    setShowProductScanner(false);
   };
 
   useEffect(() => {
@@ -245,6 +245,7 @@ export default function Home() {
         allSuggestions.add(store.name);
         allSuggestions.add(store.description);
         allSuggestions.add(store.location);
+        allSuggestions.add(store.type || '');
       });
     });
     if (businessFilter === 'groceries') {
@@ -270,7 +271,8 @@ export default function Home() {
       stores: cat.stores.filter(store =>
         store.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         store.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        store.location.toLowerCase().includes(searchQuery.toLowerCase())
+        store.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        store.type?.toLowerCase().includes(searchQuery.toLowerCase())
       )
     }));
   }, [searchQuery, displayStores, businessFilter]);
@@ -341,10 +343,10 @@ export default function Home() {
             {t('submitYourBusiness')}
           </button>
           <button
-            onClick={handleOpenBarcodeScanner}
+            onClick={handleOpenProductScanner}
             className="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors duration-200 mx-1 font-cursive"
           >
-            Barcode Scanner
+            Product Scanner
           </button>
         </div>
 
@@ -430,7 +432,7 @@ export default function Home() {
       
       {showSubmissionForm && <BusinessSubmissionForm onClose={handleCloseSubmissionForm} />}
       {showSupportModal && showSupportModal && <SupportModal onClose={handleCloseSupportModal} />}
-      {showBarcodeScanner && <BarcodeScannerModal onClose={handleCloseBarcodeScanner} />}
+      {showProductScanner && <ProductScannerModal onClose={handleCloseProductScanner} />}
     </>
   );
 }

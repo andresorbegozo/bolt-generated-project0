@@ -1,5 +1,7 @@
 import { Store } from '../../types';
 import { groceryStoresPart2 } from './groceryStoresPart2';
+import { groceryStoresPart3 } from './groceryStoresPart3';
+import { groceryStoresPart4 } from './groceryStoresPart4';
 
     export const groceryStores: Store[] = [
       {
@@ -520,5 +522,7 @@ import { groceryStoresPart2 } from './groceryStoresPart2';
           isForeignMajorityInvested: false,
           type: 'Pantry'
         },
-        ...groceryStoresPart2
+        ...groceryStoresPart2,
+        ...groceryStoresPart3,
+        ...groceryStoresPart4
     ];

@@ -3,16 +3,17 @@ import { X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import jsQR from 'jsqr';
 
-interface BarcodeScannerModalProps {
+interface ProductScannerModalProps {
   onClose: () => void;
 }
 
-export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProps) {
+export default function ProductScannerModal({ onClose }: ProductScannerModalProps) {
   const { t } = useLanguage();
   const [scanResult, setScanResult] = useState<string | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [cameraActive, setCameraActive] = useState(false);
+  const [uploadStatus, setUploadStatus] = useState<string | null>(null);
 
   const handleStartCamera = async () => {
     try {
@@ -82,6 +83,7 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
+      setUploadStatus('Image uploaded, analyzing...');
       const reader = new FileReader();
       reader.onload = (event) => {
         const img = new Image();
@@ -98,11 +100,13 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
               if (code) {
                 setScanResult(`Barcode scanned: ${code.data}`);
                 window.open(`https://www.google.com/search?q=${code.data}`, '_blank');
+                setUploadStatus(null);
               } else {
                 setScanResult('No barcode detected in the image. Please try again.');
                 // Perform Google Image Search
                 const imageUrl = event.target?.result as string;
                 window.open(`https://www.google.com/searchbyimage?image_url=${encodeURIComponent(imageUrl)}`, '_blank');
+                setUploadStatus(null);
               }
             }
           }
@@ -117,7 +121,7 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
       <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-bold">Barcode Scanner</h2>
+          <h2 className="text-xl font-bold">Product Scanner</h2>
           <button onClick={onClose} className="text-gray-500 hover:text-gray-700 focus:outline-none">
             <X className="w-5 h-5" />
           </button>
@@ -149,7 +153,7 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
               onClick={handleScan}
               className="mt-2 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors duration-200"
             >
-              Scan Barcode
+              Scan Product
             </button>
           </div>
         )}
@@ -165,7 +169,11 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
           />
         </div>
-
+        {uploadStatus && (
+          <div className="mt-4 p-4 bg-gray-100 rounded-md">
+            <p className="text-gray-700">{uploadStatus}</p>
+          </div>
+        )}
         {scanResult && (
           <div className="mt-4 p-4 bg-gray-100 rounded-md">
             <p className="text-gray-700">{scanResult}</p>
