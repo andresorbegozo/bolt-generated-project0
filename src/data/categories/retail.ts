@@ -78,5 +78,31 @@ export const retailStores = [
     isCanadianOwned: false,
     isCanadianMajorityInvested: false,
     isForeignMajorityInvested: true
+  },
+  {
+    id: 'retail-gray-tools',
+    name: 'Gray Tools',
+    description: 'A Canadian manufacturer of industrial hand tools.',
+    url: 'https://www.graytools.com',
+    image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk',
+    location: 'Brampton, Ontario',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false
+  },
+  {
+    id: 'retail-watson-gloves',
+    name: 'Watson Gloves',
+    description: 'A Canadian manufacturer of work and safety gloves.',
+    url: 'https://www.watsongloves.com',
+    image: 'https://images.unsplash.com/photos/NH1d0xX6Ldk',
+    location: 'Burnaby, British Columbia',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false
   }
 ];

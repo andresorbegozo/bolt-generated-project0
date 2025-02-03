@@ -38,6 +38,21 @@ export class SearchCollector {
     // - Business directories
     
     // For now, return null to indicate search/verification needed
+    if (companyName.toLowerCase() === 'hovr') {
+      return {
+        id: 'rideshare-hovr',
+        name: 'HOVR',
+        description: 'A Canadian ride-sharing company.',
+        url: 'https://www.hovr.com',
+        image: 'https://images.unsplash.com/photo-1549369925-95f3b4b89b09?auto=format&fit=crop&q=80&w=800',
+        location: 'Toronto, ON',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
+      }
+    }
     return null;
   }
 

@@ -21,3 +21,12 @@ export interface Store {
 
     export type BusinessFilter = 'all' | 'corporate-franchise' | 'independent' | 'groceries';
     export type OwnershipFilter = 'all' | 'canadian-owned' | 'canadian-majority' | 'foreign-majority';
+
+    export interface Product {
+      id: string;
+      name: string;
+      description: string;
+      image: string;
+      location: string;
+      type: string;
+    }

@@ -150,10 +150,10 @@ import { Store } from '../../types';
       },
       {
         id: 'fashion-populess',
-        name: 'Populess',
+        name: 'The Populess',
         description: 'A clothing brand based in Lethbridge, Alberta.',
         url: 'https://populess.com',
-        image: 'https://unsplash.com/photos/8mj-o2H5PKE',
+        image: 'https://unsplash.com/photos/1Sjg2Ml3-3M',
         location: 'Lethbridge, AB',
         isCorporate: true,
         isFranchise: false,
@@ -192,7 +192,7 @@ import { Store } from '../../types';
         name: 'Reigning Champ',
         description: 'A Vancouver-based athletic wear brand.',
         url: 'https://reigningchamp.com',
-        image: 'https://images.unsplash.com/photos/nyL-rzwP-Mk',
+        image: 'https://images.unsplash.com/photos/NH1d0xX6Ldk',
         location: 'Vancouver, BC',
         isCorporate: true,
         isFranchise: false,
@@ -330,6 +330,58 @@ import { Store } from '../../types';
         isCanadianMajorityInvested: true,
         isForeignMajorityInvested: false
       },
+      {
+        id: 'fashion-naked-famous',
+        name: 'Naked & Famous Denim',
+        description: 'Montreal-based denim brand known for its unique fabrics and construction.',
+        url: 'https://nakedandfamousdenim.com',
+        image: 'https://images.unsplash.com/photos/1ddol8rgUH8',
+        location: 'Montreal, QC',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
+      },
+      {
+        id: 'fashion-bn3th',
+        name: 'BN3TH',
+        description: 'Vancouver-based underwear brand known for its innovative pouch design.',
+        url: 'https://bn3th.com',
+        image: 'https://images.unsplash.com/photos/NH1d0xX6Ldk',
+        location: 'Vancouver, BC',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
+      },
+      {
+        id: 'fashion-alto-collective',
+        name: 'Alto Collective',
+        description: 'A Toronto-based clothing brand.',
+        url: 'https://altocollective.com',
+        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk',
+        location: 'Toronto, ON',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
+      },
+      {
+        id: 'fashion-sackville-harness',
+        name: 'Sackville Harness',
+        description: 'A Sackville-based manufacturer of leather goods and harnesses.',
+        url: 'https://sackvilleharness.com',
+        image: 'https://images.unsplash.com/photos/1ddol8rgUH8',
+        location: 'Sackville, New Brunswick',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
+      }
     ];
 
     fashionStores.push(...newFashionStores.filter(store => !existingFashionStoreNames.has(store.name.toLowerCase())));

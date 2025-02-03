@@ -70,3 +70,21 @@ img[loading="lazy"] {
 img[loading="lazy"].loaded {
   opacity: 1;
 }
+
+/* Ensure CategoryGrid is visible and has proper spacing */
+.category-grid-container {
+  display: block; /* Ensure the container is displayed */
+  margin-bottom: 2rem; /* Add some bottom margin for spacing */
+}
+
+/* Ensure CategoryGrid has a scrollable area */
+.category-grid-container .grid {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 1rem;
+}
+
+/* Ensure CategoryGrid items have proper spacing */
+.category-grid-container .grid > * {
+  margin-right: 1rem;
+}

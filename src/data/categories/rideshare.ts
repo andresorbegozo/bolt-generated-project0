@@ -30,6 +30,45 @@ import { Store } from '../../types';
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
         isForeignMajorityInvested: false
+      },
+      {
+        id: 'rideshare-hovr',
+        name: 'HOVR',
+        description: 'A Canadian ride-sharing company.',
+        url: 'https://www.hovr.com',
+        image: 'https://images.unsplash.com/photo-1549369925-95f3b4b89b09?auto=format&fit=crop&q=80&w=800',
+        location: 'Toronto, ON',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
+      },
+      {
+        id: 'rideshare-poparide',
+        name: 'Poparide',
+        description: 'A Canadian ride-sharing company.',
+        url: 'https://www.poparide.com',
+        image: 'https://unsplash.com/photos/NH1d0xX6Ldk',
+        location: 'Vancouver, British Columbia',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
+      },
+      {
+        id: 'rideshare-uride',
+        name: 'Uride',
+        description: 'A Canadian ride-sharing company.',
+        url: 'https://www.uride.com',
+        image: 'https://unsplash.com/photos/3OZrQ6g4zVk',
+        location: 'Thunder Bay, Ontario',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
       }
     ];
 

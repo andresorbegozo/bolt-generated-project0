@@ -1,0 +1,102 @@
+import { Store } from '../../types';
+
+export const meatStores: Store[] = [
+  {
+    id: 'food-maple-leaf',
+    name: 'Maple Leaf Foods',
+    description: 'Mississauga-based meat and processed foods company.',
+    url: 'https://www.mapleleaffoods.com',
+    image: 'https://images.unsplash.com/photo-1563379091-7a7ee9228a63?auto=format&fit=crop&q=80&w=800',
+    location: 'Mississauga, ON',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Meat'
+  },
+  {
+    id: 'food-schneiders',
+    name: 'Schneiders',
+    description: 'Mississauga-based meat and processed foods brand by Maple Leaf Foods.',
+    url: 'https://www.mapleleaffoods.com',
+    image: 'https://images.unsplash.com/photo-1563379091-7a7ee9228a63?auto=format&fit=crop&q=80&w=800',
+    location: 'Mississauga, ON',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Meat'
+  },
+  {
+    id: 'food-pillers',
+    name: 'Pillers',
+    description: 'Waterloo-based meat and processed foods company.',
+    url: 'https://www.pillers.com',
+    image: 'https://images.unsplash.com/photo-1563379091-7a7ee9228a63?auto=format&fit=crop&q=80&w=800',
+    location: 'Waterloo, ON',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Meat'
+  },
+  {
+    id: 'food-olymel',
+    name: 'Olymel',
+    description: 'Saint-Hyacinthe-based meat and processed foods company.',
+    url: 'https://www.olymel.com',
+    image: 'https://images.unsplash.com/photo-1563379091-7a7ee9228a63?auto=format&fit=crop&q=80&w=800',
+    location: 'Saint-Hyacinthe, QC',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Meat'
+  },
+  {
+    id: 'food-grimms',
+    name: 'Grimm’s Fine Foods',
+    description: 'Richmond-based meat and processed foods company.',
+    url: 'https://www.grimmsfoods.com',
+    image: 'https://images.unsplash.com/photo-1563379091-7a7ee9228a63?auto=format&fit=crop&q=80&w=800',
+    location: 'Richmond, BC',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Meat'
+  },
+  {
+    id: 'food-lilydale',
+    name: 'Lilydale',
+    description: 'Edmonton-based poultry producer.',
+    url: 'https://www.lilydale.ca',
+    image: 'https://images.unsplash.com/photo-1563379091-7a7ee9228a63?auto=format&fit=crop&q=80&w=800',
+    location: 'Edmonton, AB',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Meat'
+  },
+  {
+    id: 'food-maple-lodge',
+    name: 'Maple Lodge Farms',
+    description: 'Brampton-based poultry producer.',
+    url: 'https://www.maplelodgefarms.com',
+    image: 'https://images.unsplash.com/photo-1563379091-7a7ee9228a63?auto=format&fit=crop&q=80&w=800',
+    location: 'Brampton, ON',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Meat'
+  }
+];

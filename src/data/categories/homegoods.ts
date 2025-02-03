@@ -147,7 +147,33 @@ import { Store } from '../../types';
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
         isForeignMajorityInvested: false
+      },
+      {
+        id: 'homegoods-stolen-riches',
+        name: 'Stolen Riches',
+        description: 'A Toronto-based manufacturer of unique and high-quality socks.',
+        url: 'https://stolenriches.com',
+        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk',
+        location: 'Toronto, ON',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
+      },
+      {
+        id: 'homegoods-pikes-awnings',
+        name: 'Pike’s Awnings',
+        description: 'A Toronto-based manufacturer of custom awnings and canopies.',
+        url: 'https://www.pikesawnings.com',
+        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk',
+        location: 'Toronto, ON',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false
       }
     ];
 
-    homegoodsStores.push(...newHomeGoodsStores);
+    homegoodsStores.push(...newHomeGoodsStores.filter(store => !existingHomeGoodsStoreNames.has(store.name.toLowerCase())));
