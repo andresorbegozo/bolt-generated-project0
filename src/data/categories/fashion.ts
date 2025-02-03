@@ -16,7 +16,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-aritzia',
@@ -29,7 +30,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-lululemon',
@@ -42,7 +44,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-canada-goose',
@@ -55,7 +58,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Outerwear'
       },
       {
         id: 'fashion-stanfields',
@@ -68,7 +72,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-samuelsohn',
@@ -81,7 +86,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-frank-oak',
@@ -94,7 +100,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-tentree',
@@ -107,7 +114,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-kotn',
@@ -120,7 +128,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-duer',
@@ -133,7 +142,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-anian',
@@ -146,7 +156,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-populess',
@@ -159,7 +170,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-encircled',
@@ -172,7 +184,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-province-of-canada',
@@ -185,7 +198,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-reigning-champ',
@@ -198,7 +212,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-hemlock-and-oak',
@@ -211,7 +226,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-nab-leather',
@@ -224,7 +240,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Leather Goods'
       },
       {
         id: 'fashion-garneau-slippers',
@@ -237,7 +254,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Footwear'
       },
       {
         id: 'fashion-martino-boots',
@@ -250,7 +268,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Footwear'
       },
       {
         id: 'fashion-canada-west-boots',
@@ -263,7 +282,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Footwear'
       },
       {
         id: 'fashion-tatra-safety-boots',
@@ -276,7 +296,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Footwear'
       },
       {
         id: 'fashion-100-ways',
@@ -289,7 +310,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-sheertex',
@@ -302,7 +324,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-m0851',
@@ -315,7 +338,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Leather Goods'
       },
       {
         id: 'fashion-opelle',
@@ -328,7 +352,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Leather Goods'
       },
       {
         id: 'fashion-naked-famous',
@@ -341,7 +366,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-bn3th',
@@ -354,7 +380,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-alto-collective',
@@ -367,7 +394,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'fashion-sackville-harness',
@@ -380,7 +408,64 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Leather Goods'
+      },
+      {
+        id: 'fashion-gildan',
+        name: 'Gildan Activewear',
+        description: 'Montreal-based manufacturer of apparel.',
+        url: 'https://www.gildan.com',
+        image: 'https://images.unsplash.com/photos/1ddol8rgUH8',
+        location: 'Montreal, Quebec',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
+      },
+      {
+        id: 'fashion-reitmans',
+        name: 'Reitmans (Canada) Limited',
+        description: 'A Montreal-based women\'s clothing retailer.',
+        url: 'https://www.reitmans.com',
+        image: 'https://images.unsplash.com/photo-1ddol8rgUH8',
+        location: 'Montreal, Quebec',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
+      },
+      {
+        id: 'fashion-lasenza',
+        name: 'La Senza Corporation',
+        description: 'A Dorval-based lingerie and intimate apparel retailer.',
+        url: 'https://www.lasenza.com',
+        image: 'https://images.unsplash.com/photo-1ddol8rgUH8',
+        location: 'Dorval, Quebec',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
+      },
+      {
+        id: 'fashion-lechateau',
+        name: 'Le Château Inc.',
+        description: 'A Montreal-based fashion retailer.',
+        url: 'https://www.lechateau.com',
+        image: 'https://images.unsplash.com/photo-1ddol8rgUH8',
+        location: 'Montreal, Quebec',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       }
     ];
 

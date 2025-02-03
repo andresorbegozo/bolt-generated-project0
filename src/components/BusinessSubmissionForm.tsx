@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { categories } from '../data/categories';
+import { CategoryManager } from '../utils/categoryManager';
+import type { Store } from '../types';
 
 interface BusinessSubmissionFormProps {
   onClose: () => void;
@@ -17,6 +19,8 @@ export default function BusinessSubmissionForm({ onClose }: BusinessSubmissionFo
   const [description, setDescription] = useState('');
   const [email, setEmail] = useState('');
   const [showCityDropdown, setShowCityDropdown] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [submissionMessage, setSubmissionMessage] = useState('');
 
   const cities = useMemo(() => {
     const citySet = new Set<string>();
@@ -43,11 +47,56 @@ export default function BusinessSubmissionForm({ onClose }: BusinessSubmissionFo
     setShowCityDropdown(false);
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmissionStatus('submitting');
+    setSubmissionMessage('');
+
+    const newCompany: Store = {
+      id: CategoryManager.generateId('submission', companyName),
+      name: companyName,
+      description: description,
+      url: website,
+      image: 'https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?auto=format&fit=crop&q=80&w=800',
+      location: location,
+      isCorporate: isCorporate,
+      isFranchise: !isIndependent,
+      isCanadianOwned: true,
+      isCanadianMajorityInvested: true,
+      isForeignMajorityInvested: false,
+      type: 'Pending'
+    };
+
+    try {
+      const success = await CategoryManager.processNewCompany(newCompany);
+      if (success) {
+        setSubmissionStatus('success');
+        setSubmissionMessage('Thank you for your submission!');
+        setCompanyName('');
+        setIsCorporate(false);
+        setIsIndependent(false);
+        setLocation('');
+        setWebsite('http://');
+        setKeywords('');
+        setDescription('');
+        setEmail('');
+        setTimeout(onClose, 2000);
+      } else {
+        setSubmissionStatus('error');
+        setSubmissionMessage('There was an error processing your submission.');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setSubmissionStatus('error');
+      setSubmissionMessage('There was an error processing your submission.');
+    }
+  };
+
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
       <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
         <h2 className="text-xl font-bold mb-4">{t('submitYourBusiness')}</h2>
-        <form name="business-submission" method="POST" data-netlify="true" className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <input type="hidden" name="form-name" value="business-submission" />
           <div>
             <label className="block text-sm font-medium text-gray-700">
@@ -168,6 +217,12 @@ export default function BusinessSubmissionForm({ onClose }: BusinessSubmissionFo
               required
             />
           </div>
+          {submissionStatus === 'error' && (
+            <p className="text-red-500 text-sm">{submissionMessage}</p>
+          )}
+          {submissionStatus === 'success' && (
+            <p className="text-green-500 text-sm">{submissionMessage}</p>
+          )}
           <div className="flex justify-end gap-2">
             <button
               type="button"
@@ -179,8 +234,9 @@ export default function BusinessSubmissionForm({ onClose }: BusinessSubmissionFo
             <button
               type="submit"
               className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors duration-200"
+              disabled={submissionStatus === 'submitting'}
             >
-              {t('submit')}
+              {submissionStatus === 'submitting' ? 'Submitting...' : t('submit')}
             </button>
           </div>
         </form>

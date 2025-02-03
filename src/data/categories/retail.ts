@@ -112,5 +112,33 @@ export const retailStores = [
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
     type: 'Workwear'
+  },
+  {
+    id: 'retail-marks',
+    name: 'Mark’s (Mark’s Work Wearhouse)',
+    description: 'A Canadian retailer of workwear and casual clothing.',
+    url: 'https://www.marks.com',
+    image: 'https://images.unsplash.com/photos/1ddol8rgUH8',
+    location: 'Calgary, Alberta',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Clothing'
+  },
+  {
+    id: 'retail-sportchek',
+    name: 'Sport Chek',
+    description: 'A Canadian retailer of sporting goods and apparel.',
+    url: 'https://www.sportchek.ca',
+    image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk?auto=format&fit=crop&q=80&w=800',
+    location: 'Calgary, Alberta',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Sporting Goods'
   }
 ];

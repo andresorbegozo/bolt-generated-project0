@@ -16,7 +16,36 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Conglomerate'
+      },
+      {
+        id: 'conglomerate-george-weston',
+        name: 'George Weston Limited',
+        description: 'A Canadian holding company with interests in food processing and retail.',
+        url: 'https://www.georgeweston.ca',
+        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk?auto=format&fit=crop&q=80&w=800',
+        location: 'Toronto, Ontario',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Conglomerate'
+      },
+      {
+        id: 'conglomerate-loblaw',
+        name: 'Loblaw Companies Limited',
+        description: 'A Canadian retail company with grocery and pharmacy chains.',
+        url: 'https://www.loblaw.ca',
+        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk?auto=format&fit=crop&q=80&w=800',
+        location: 'Brampton, Ontario',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Conglomerate'
       }
     ];
 
