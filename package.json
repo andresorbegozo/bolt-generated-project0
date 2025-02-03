@@ -17,6 +17,7 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.10",
     "express": "^4.18.3",
+    "jsqr": "^1.4.0",
     "lucide-react": "^0.344.0",
     "node-cron": "^3.0.3",
     "react": "^18.3.1",

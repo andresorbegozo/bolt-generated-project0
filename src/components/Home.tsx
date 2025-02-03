@@ -245,6 +245,7 @@ export default function Home() {
         allSuggestions.add(store.name);
         allSuggestions.add(store.description);
         allSuggestions.add(store.location);
+        allSuggestions.add(store.type || '');
       });
     });
     if (businessFilter === 'groceries') {
@@ -270,7 +271,8 @@ export default function Home() {
       stores: cat.stores.filter(store =>
         store.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         store.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        store.location.toLowerCase().includes(searchQuery.toLowerCase())
+        store.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        store.type?.toLowerCase().includes(searchQuery.toLowerCase())
       )
     }));
   }, [searchQuery, displayStores, businessFilter]);
