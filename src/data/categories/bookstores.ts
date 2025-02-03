@@ -16,7 +16,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Books'
       },
       {
         id: 'book-mcnally',
@@ -29,7 +30,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Books'
       },
       {
         id: 'book-munro',
@@ -42,7 +44,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Books'
       },
       {
         id: 'book-type',
@@ -55,7 +58,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Books'
       },
       {
         id: 'book-librairie-wilson',
@@ -68,7 +72,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Books'
       },
       {
         id: 'book-westminster',
@@ -81,7 +86,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Books'
       },
       {
         id: 'book-bookmark',
@@ -94,7 +100,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Books'
       }
     ];
 

@@ -93,7 +93,13 @@ export const categories = [
   {
     id: 'foodAndBeverage',
     title: 'Food & Beverage',
-    stores: foodAndBeverageStores
+    stores: [
+      ...snackStores,
+      ...meatStores,
+      ...dairyStores,
+      ...pantryStores,
+      ...beverageStores.filter(store => store.type !== 'Alcohol')
+    ]
   },
   {
     id: 'restaurants',
@@ -190,4 +196,4 @@ export const categories = [
     title: 'Grocery Stores',
     stores: supermarketStores
   }
-];
+].sort((a, b) => b.stores.length - a.stores.length);

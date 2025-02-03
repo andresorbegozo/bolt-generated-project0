@@ -10,7 +10,8 @@ export const sportsStores = [
     isFranchise: false,
     isCanadianOwned: false,
     isCanadianMajorityInvested: false,
-    isForeignMajorityInvested: true
+    isForeignMajorityInvested: true,
+    type: 'Outdoor Gear'
   },
   {
     id: 'sports-sail',
@@ -23,7 +24,8 @@ export const sportsStores = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Outdoor Gear'
   },
   {
     id: 'sports-pelican',
@@ -36,7 +38,8 @@ export const sportsStores = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Sporting Goods'
   },
   {
     id: 'sports-mec-updated',
@@ -49,6 +52,7 @@ export const sportsStores = [
     isFranchise: false,
     isCanadianOwned: false,
     isCanadianMajorityInvested: false,
-    isForeignMajorityInvested: true
+    isForeignMajorityInvested: true,
+    type: 'Outdoor Gear'
   }
 ];

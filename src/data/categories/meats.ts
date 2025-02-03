@@ -63,7 +63,7 @@ export const meatStores: Store[] = [
     description: 'Richmond-based meat and processed foods company.',
     url: 'https://www.grimmsfoods.com',
     image: 'https://images.unsplash.com/photo-1563379091-7a7ee9228a63?auto=format&fit=crop&q=80&w=800',
-    location: 'Richmond, BC',
+    location: 'Richmond, British Columbia',
     isCorporate: true,
     isFranchise: false,
     isCanadianOwned: true,
@@ -83,7 +83,7 @@ export const meatStores: Store[] = [
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
-    type: 'Meat'
+    type: 'Poultry'
   },
   {
     id: 'food-maple-lodge',
@@ -97,6 +97,6 @@ export const meatStores: Store[] = [
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
-    type: 'Meat'
+    type: 'Poultry'
   }
 ];

@@ -20,4 +20,4 @@ import { Store } from '../../types';
       }
     ];
 
-    conglomerateStores.push(...newConglomerateStores);
+    conglomerateStores.push(...newConglomerateStores.filter(store => !existingConglomerateStoreNames.has(store.name.toLowerCase())));

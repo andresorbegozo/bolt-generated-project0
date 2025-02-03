@@ -13,7 +13,7 @@ export const pantryStores: Store[] = [
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
-    type: 'Pantry'
+    type: 'Condiments'
   },
   {
     id: 'food-compliments',
@@ -27,7 +27,7 @@ export const pantryStores: Store[] = [
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
-    type: 'Pantry'
+    type: 'Condiments'
   },
   {
     id: 'food-kozliks',
@@ -41,7 +41,7 @@ export const pantryStores: Store[] = [
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
-    type: 'Pantry'
+    type: 'Mustard'
   },
   {
     id: 'food-renees',
@@ -55,7 +55,7 @@ export const pantryStores: Store[] = [
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
-    type: 'Pantry'
+    type: 'Salad Dressings'
   },
   {
     id: 'food-dawsons',
@@ -69,7 +69,7 @@ export const pantryStores: Store[] = [
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
-    type: 'Pantry'
+    type: 'Hot Sauce'
   },
   {
     id: 'food-no-name',
@@ -83,7 +83,7 @@ export const pantryStores: Store[] = [
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
-    type: 'Pantry'
+    type: 'Condiments'
   },
   {
     id: 'food-robin-hood',
@@ -97,7 +97,7 @@ export const pantryStores: Store[] = [
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
-    type: 'Pantry'
+    type: 'Baking Products'
   },
   {
     id: 'food-five-roses',
@@ -111,7 +111,7 @@ export const pantryStores: Store[] = [
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
-    type: 'Pantry'
+    type: 'Baking Products'
   },
   {
     id: 'food-camino',
@@ -125,6 +125,6 @@ export const pantryStores: Store[] = [
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
-    type: 'Pantry'
+    type: 'Baking Products'
   }
 ];

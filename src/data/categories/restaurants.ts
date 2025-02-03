@@ -16,7 +16,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Restaurants'
       },
       {
         id: 'restaurant-mtl-bagel',
@@ -29,7 +30,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Food'
       },
       {
         id: 'restaurant-la-belle',
@@ -42,7 +44,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Restaurants'
       },
       {
         id: 'restaurant-scores',
@@ -55,7 +58,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Restaurants'
       },
       {
         id: 'restaurant-coras',
@@ -68,7 +72,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Restaurants'
       },
       {
         id: 'restaurant-aw',
@@ -81,7 +86,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Restaurants'
       },
       {
         id: 'restaurant-boston-pizza',
@@ -94,7 +100,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Restaurants'
       },
       {
         id: 'restaurant-robins-donuts',
@@ -107,7 +114,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Restaurants'
       },
       {
         id: 'restaurant-ben-and-florentine',
@@ -120,7 +128,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Restaurants'
       }
     ];
 

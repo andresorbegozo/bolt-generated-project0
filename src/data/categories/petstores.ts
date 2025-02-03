@@ -16,7 +16,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Pet Supplies'
       },
       {
         id: 'pet-tail-blazers',
@@ -29,7 +30,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Pet Supplies'
       },
       {
         id: 'pet-global',
@@ -42,7 +44,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Pet Supplies'
       }
     ];
 

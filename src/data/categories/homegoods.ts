@@ -16,7 +16,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Kitchenware'
       },
       {
         id: 'homegoods-quilts',
@@ -29,7 +30,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Home Textiles'
       },
       {
         id: 'homegoods-linen-chest',
@@ -42,7 +44,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Home Goods'
       },
       {
         id: 'homegoods-benix',
@@ -55,7 +58,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Kitchenware'
       },
       {
         id: 'homegoods-lampe-berger',
@@ -68,7 +72,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Home Fragrance'
       },
       {
         id: 'homegoods-umbra',
@@ -81,7 +86,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Home Decor'
       },
       {
         id: 'homegoods-henson-shaving',
@@ -94,7 +100,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Shaving Tools'
       },
       {
         id: 'homegoods-macausland',
@@ -107,7 +114,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Textiles'
       },
       {
         id: 'homegoods-crow-leather',
@@ -120,7 +128,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Leather Goods'
       },
       {
         id: 'homegoods-organiclifestyle',
@@ -133,7 +142,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Home Goods'
       },
       {
         id: 'homegoods-purdy-natural',
@@ -146,7 +156,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Home Goods'
       },
       {
         id: 'homegoods-stolen-riches',
@@ -159,7 +170,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Clothing'
       },
       {
         id: 'homegoods-pikes-awnings',
@@ -172,7 +184,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Home Improvement'
       }
     ];
 

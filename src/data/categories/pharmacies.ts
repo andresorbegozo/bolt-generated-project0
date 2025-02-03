@@ -16,7 +16,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Pharmacy'
       },
       {
         id: 'pharmacy-familiprix',
@@ -29,7 +30,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Pharmacy'
       },
       {
         id: 'pharmacy-pharmasave',
@@ -42,7 +44,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Pharmacy'
       },
       {
         id: 'pharmacy-uniprix',
@@ -55,7 +58,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Pharmacy'
       }
     ];
 

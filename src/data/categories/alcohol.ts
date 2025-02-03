@@ -16,7 +16,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Beer'
       },
       {
         id: 'alcohol-moosehead',
@@ -29,7 +30,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Beer'
       },
       {
         id: 'alcohol-sleeman',
@@ -42,7 +44,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: false,
         isCanadianMajorityInvested: false,
-        isForeignMajorityInvested: true
+        isForeignMajorityInvested: true,
+        type: 'Beer'
       },
       {
         id: 'alcohol-corby',
@@ -55,7 +58,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: false,
         isCanadianMajorityInvested: false,
-        isForeignMajorityInvested: true
+        isForeignMajorityInvested: true,
+        type: 'Spirits and Wine'
       },
       {
         id: 'alcohol-diamond',
@@ -68,7 +72,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Wine'
       },
       {
         id: 'alcohol-andrew-peller',
@@ -81,7 +86,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Wine'
       },
       {
         id: 'alcohol-gretzky',
@@ -94,7 +100,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Spirits and Wine'
       },
       {
         id: 'alcohol-big-rock',
@@ -107,7 +114,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Beer'
       },
       {
         id: 'alcohol-waterloo',
@@ -120,7 +128,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Beer'
       },
       {
         id: 'alcohol-brick',
@@ -133,7 +142,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Beer'
       },
       {
         id: 'alcohol-arterra',
@@ -146,7 +156,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: false,
         isCanadianMajorityInvested: false,
-        isForeignMajorityInvested: true
+        isForeignMajorityInvested: true,
+        type: 'Wine'
       },
       {
         id: 'alcohol-mission-hill',
@@ -159,7 +170,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Wine'
       },
       {
         id: 'alcohol-inniskillin',
@@ -172,7 +184,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Wine'
       },
       {
         id: 'alcohol-okanagan-springs',
@@ -185,7 +198,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: false,
         isCanadianMajorityInvested: false,
-        isForeignMajorityInvested: true
+        isForeignMajorityInvested: true,
+        type: 'Beer'
       },
       {
         id: 'alcohol-diageo-canada',
@@ -198,7 +212,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: false,
         isCanadianMajorityInvested: false,
-        isForeignMajorityInvested: true
+        isForeignMajorityInvested: true,
+        type: 'Spirits'
       }
     ];
 

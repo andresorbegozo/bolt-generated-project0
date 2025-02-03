@@ -55,7 +55,7 @@ export const beverageStores: Store[] = [
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
-    type: 'Beverages'
+    type: 'Sports Drinks'
   },
   {
     id: 'beverage-second-cup',
@@ -69,6 +69,6 @@ export const beverageStores: Store[] = [
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
-    type: 'Beverages'
+    type: 'Coffee'
   }
 ];

@@ -12,7 +12,8 @@ export const supermarketStores: Store[] = [
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Grocery'
       },
       {
         id: 'supermarket-loblaws',
@@ -25,7 +26,8 @@ export const supermarketStores: Store[] = [
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Grocery'
       },
       {
         id: 'supermarket-sobeys',
@@ -38,7 +40,8 @@ export const supermarketStores: Store[] = [
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Grocery'
       },
       {
         id: 'supermarket-metro',
@@ -51,7 +54,8 @@ export const supermarketStores: Store[] = [
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Grocery'
       },
       {
         id: 'supermarket-saveonfoods',
@@ -64,7 +68,8 @@ export const supermarketStores: Store[] = [
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Grocery'
       },
       {
         id: 'supermarket-iga',
@@ -77,7 +82,8 @@ export const supermarketStores: Store[] = [
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Grocery'
       },
       {
         id: 'supermarket-coop',
@@ -90,7 +96,8 @@ export const supermarketStores: Store[] = [
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Grocery'
       },
       {
         id: 'supermarket-giant-tiger',
@@ -103,7 +110,8 @@ export const supermarketStores: Store[] = [
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Grocery'
       },
       {
         id: 'supermarket-farm-boy',
@@ -116,7 +124,8 @@ export const supermarketStores: Store[] = [
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Grocery'
       },
       {
         id: 'supermarket-northmart',
@@ -129,6 +138,7 @@ export const supermarketStores: Store[] = [
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Grocery'
       }
 ];

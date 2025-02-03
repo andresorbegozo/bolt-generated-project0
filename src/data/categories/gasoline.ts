@@ -12,7 +12,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Gasoline'
       },
       {
         id: 'gas-parkland',
@@ -25,7 +26,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Gasoline'
       },
       {
         id: 'gas-macewen',
@@ -38,7 +40,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Gasoline'
       },
       {
         id: 'gas-wilson',
@@ -51,7 +54,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Gasoline'
       },
       {
         id: 'gas-crevier',
@@ -64,7 +68,8 @@ import { Store } from '../../types';
         isFranchise: true,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Gasoline'
       }
     ];
 

@@ -322,7 +322,7 @@ import { Store } from '../../types';
         name: 'Opelle',
         description: 'Toronto-based leather goods company.',
         url: 'https://opellecreative.com',
-        image: 'https://images.unsplash.com/photos/3OZrQ6g4zVk',
+        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk',
         location: 'Toronto, ON',
         isCorporate: true,
         isFranchise: false,

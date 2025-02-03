@@ -12,7 +12,8 @@ export const retailStores = [
     isFranchise: true,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Retail'
   },
   {
     id: 'retail-home-hardware',
@@ -25,7 +26,8 @@ export const retailStores = [
     isFranchise: true,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Hardware'
   },
   {
     id: 'retail-lee-valley',
@@ -38,7 +40,8 @@ export const retailStores = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Tools'
   },
   {
     id: 'retail-princess-auto',
@@ -51,7 +54,8 @@ export const retailStores = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Tools'
   },
   {
     id: 'retail-lee-valley-updated',
@@ -64,7 +68,8 @@ export const retailStores = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Tools'
   },
   {
     id: 'retail-rona',
@@ -77,7 +82,8 @@ export const retailStores = [
     isFranchise: true,
     isCanadianOwned: false,
     isCanadianMajorityInvested: false,
-    isForeignMajorityInvested: true
+    isForeignMajorityInvested: true,
+    type: 'Home Improvement'
   },
   {
     id: 'retail-gray-tools',
@@ -90,7 +96,8 @@ export const retailStores = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Tools'
   },
   {
     id: 'retail-watson-gloves',
@@ -103,6 +110,7 @@ export const retailStores = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Workwear'
   }
 ];

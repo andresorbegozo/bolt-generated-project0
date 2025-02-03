@@ -16,7 +16,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Software'
       },
       {
         id: 'tech-workleap',
@@ -29,7 +30,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Software'
       },
       {
         id: 'tech-cae',
@@ -42,7 +44,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Simulators'
       },
       {
         id: 'tech-memoryexpress',
@@ -55,7 +58,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Electronics'
       },
       {
         id: 'tech-totem-acoustic',
@@ -68,7 +72,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Audio Equipment'
       },
       {
         id: 'tech-psb-speakers',
@@ -81,7 +86,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Audio Equipment'
       },
       {
         id: 'tech-fluance',
@@ -94,7 +100,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Audio Equipment'
       },
       {
         id: 'tech-401-games',
@@ -107,7 +114,8 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Games'
       },
       {
         id: 'tech-imaginaire',
@@ -120,7 +128,36 @@ import { Store } from '../../types';
         isFranchise: false,
         isCanadianOwned: true,
         isCanadianMajorityInvested: true,
-        isForeignMajorityInvested: false
+        isForeignMajorityInvested: false,
+        type: 'Games'
+      },
+      {
+        id: 'tech-opentext',
+        name: 'OpenText Corporation',
+        description: 'A Waterloo-based software company specializing in information management.',
+        url: 'https://www.opentext.com',
+        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk?auto=format&fit=crop&q=80&w=800',
+        location: 'Waterloo, Ontario',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Software'
+      },
+      {
+        id: 'tech-shopify',
+        name: 'Shopify',
+        description: 'An Ottawa-based e-commerce platform.',
+        url: 'https://www.shopify.com',
+        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk?auto=format&fit=crop&q=80&w=800',
+        location: 'Ottawa, Ontario',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Software'
       }
     ];
 

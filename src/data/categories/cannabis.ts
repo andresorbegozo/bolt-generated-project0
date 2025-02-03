@@ -7,7 +7,11 @@ export const cannabisStores = [
     image: 'https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&q=80&w=800',
     location: 'Toronto, ON',
     isCorporate: true,
-    isFranchise: true
+    isFranchise: true,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Cannabis'
   },
   {
     id: 'cannabis-fire-flower',
@@ -17,7 +21,11 @@ export const cannabisStores = [
     image: 'https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&q=80&w=800',
     location: 'Edmonton, AB',
     isCorporate: true,
-    isFranchise: true
+    isFranchise: true,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Cannabis'
   },
   {
     id: 'cannabis-spiritleaf',
@@ -27,7 +35,11 @@ export const cannabisStores = [
     image: 'https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&q=80&w=800',
     location: 'Calgary, AB',
     isCorporate: true,
-    isFranchise: true
+    isFranchise: true,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Cannabis'
   },
   {
     id: 'cannabis-nova',
@@ -37,7 +49,11 @@ export const cannabisStores = [
     image: 'https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&q=80&w=800',
     location: 'Edmonton, AB',
     isCorporate: true,
-    isFranchise: true
+    isFranchise: true,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Cannabis'
   },
   {
     id: 'cannabis-hobo',
@@ -47,7 +63,11 @@ export const cannabisStores = [
     image: 'https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&q=80&w=800',
     location: 'Vancouver, BC',
     isCorporate: false,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Cannabis'
   },
   {
     id: 'cannabis-sqdc',
@@ -57,7 +77,11 @@ export const cannabisStores = [
     image: 'https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&q=80&w=800',
     location: 'Montreal, QC',
     isCorporate: true,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Cannabis'
   },
   {
     id: 'cannabis-ocs',
@@ -67,7 +91,11 @@ export const cannabisStores = [
     image: 'https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&q=80&w=800',
     location: 'Toronto, ON',
     isCorporate: true,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Cannabis'
   },
   {
     id: 'cannabis-bccs',
@@ -77,7 +105,11 @@ export const cannabisStores = [
     image: 'https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&q=80&w=800',
     location: 'Vancouver, BC',
     isCorporate: true,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Cannabis'
   },
   {
     id: 'cannabis-aglc',
@@ -87,7 +119,11 @@ export const cannabisStores = [
     image: 'https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&q=80&w=800',
     location: 'Edmonton, AB',
     isCorporate: true,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Cannabis'
   },
   {
     id: 'cannabis-nslc',
@@ -97,6 +133,10 @@ export const cannabisStores = [
     image: 'https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&q=80&w=800',
     location: 'Halifax, NS',
     isCorporate: true,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Cannabis'
   }
 ];

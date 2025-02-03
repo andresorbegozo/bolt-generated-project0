@@ -460,7 +460,8 @@ import { Store } from '../../types';
           isFranchise: true,
           isCanadianOwned: true,
           isCanadianMajorityInvested: true,
-          isForeignMajorityInvested: false
+          isForeignMajorityInvested: false,
+          type: 'Grocery'
         },
         {
           id: 'grocery-old-dutch',
@@ -488,7 +489,7 @@ import { Store } from '../../types';
           isCanadianOwned: true,
           isCanadianMajorityInvested: true,
           isForeignMajorityInvested: false,
-          type: 'Pantry'
+          type: 'Medicine'
         },
         {
           id: 'grocery-habitant',

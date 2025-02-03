@@ -7,7 +7,11 @@ export const luxuryStores = [
     image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=800',
     location: 'Montreal, QC',
     isCorporate: true,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Jewelry'
   },
   {
     id: 'luxury-canadian-diamonds',
@@ -17,7 +21,11 @@ export const luxuryStores = [
     image: 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=80&w=800',
     location: 'Yellowknife, NT',
     isCorporate: true,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Jewelry'
   },
   {
     id: 'luxury-polar-bear',
@@ -27,6 +35,10 @@ export const luxuryStores = [
     image: 'https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?auto=format&fit=crop&q=80&w=800',
     location: 'Yellowknife, NT',
     isCorporate: false,
-    isFranchise: false
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Jewelry'
   }
 ];

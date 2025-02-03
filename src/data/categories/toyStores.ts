@@ -11,6 +11,7 @@ export const toyStores = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Toys'
   }
 ];
