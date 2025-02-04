@@ -6,7 +6,7 @@ export const retailStores = [
     name: 'Canadian Tire',
     description: 'Toronto-based retail company offering automotive, hardware, and household products',
     url: 'https://www.canadiantire.ca',
-    image: 'https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=800',
     location: 'Toronto, ON',
     isCorporate: true,
     isFranchise: true,
@@ -140,5 +140,19 @@ export const retailStores = [
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
     type: 'Sporting Goods'
+  },
+  {
+    id: 'retail-north-west-company',
+    name: 'The North West Company Inc.',
+    description: 'A Canadian retailer that operates stores in northern Canada and other regions.',
+    url: 'https://www.northwest.ca',
+    image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk?auto=format&fit=crop&q=80&w=800',
+    location: 'Winnipeg, Manitoba',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Retail'
   }
 ];

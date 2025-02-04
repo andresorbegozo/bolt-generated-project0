@@ -159,6 +159,7 @@ export default function ProductGrid({ title, stores }: ProductGridProps) {
             onClick={() => handleScroll('left')}
             className="absolute left-2 top-1/2 -translate-y-1/2 z-[3] bg-white/90 backdrop-blur-sm rounded-full p-1.5 shadow-lg hover:shadow-xl transition-all"
             aria-label={`Scroll ${title} items left`}
+            style={{ top: '50%', bottom: 'auto' }}
           >
             <ChevronLeft className="w-5 h-5 text-gray-700" />
           </button>
@@ -177,6 +178,7 @@ export default function ProductGrid({ title, stores }: ProductGridProps) {
             onClick={() => handleScroll('right')}
             className="absolute right-2 top-1/2 -translate-y-1/2 z-[3] bg-white/90 backdrop-blur-sm rounded-full p-1.5 shadow-lg hover:shadow-xl transition-all"
             aria-label={`Scroll ${title} items right`}
+            style={{ top: '50%', bottom: 'auto' }}
           >
             <ChevronRight className="w-5 h-5 text-gray-700" />
           </button>

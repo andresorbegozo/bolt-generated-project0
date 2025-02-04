@@ -12,7 +12,8 @@ export const beautyStores: Store[] = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Skincare'
   },
   {
     id: 'beauty-lise-watier',
@@ -25,7 +26,8 @@ export const beautyStores: Store[] = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Cosmetics'
   },
   {
     id: 'beauty-marcelle',
@@ -38,7 +40,8 @@ export const beautyStores: Store[] = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Cosmetics'
   },
   {
     id: 'beauty-vasanti',
@@ -51,7 +54,8 @@ export const beautyStores: Store[] = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Cosmetics'
   },
   {
     id: 'beauty-consonant',
@@ -64,7 +68,8 @@ export const beautyStores: Store[] = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Skincare'
   },
   {
     id: 'beauty-graydon',
@@ -77,7 +82,8 @@ export const beautyStores: Store[] = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Skincare'
   },
   {
     id: 'beauty-province-apothecary',
@@ -90,6 +96,21 @@ export const beautyStores: Store[] = [
     isFranchise: false,
     isCanadianOwned: true,
     isCanadianMajorityInvested: true,
-    isForeignMajorityInvested: false
+    isForeignMajorityInvested: false,
+    type: 'Skincare'
+  },
+  {
+    id: 'beauty-undercarriage',
+    name: 'Undercarriage Deodorant',
+    description: 'A Toronto-based brand specializing in deodorant.',
+    url: 'https://www.undercarriage.ca',
+    image: 'https://images.unsplash.com/photos/1ddol8rgUH8',
+    location: 'Toronto, Ontario',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Deodorant'
   }
 ];

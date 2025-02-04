@@ -116,6 +116,48 @@ import { Store } from '../../types';
         isCanadianMajorityInvested: true,
         isForeignMajorityInvested: false,
         type: 'Media'
+      },
+      {
+        id: 'media-bce',
+        name: 'BCE Inc. (Bell Canada)',
+        description: 'A Montreal-based telecommunications company.',
+        url: 'https://www.bce.ca',
+        image: 'https://images.unsplash.com/photo-1ddol8rgUH8?auto=format&fit=crop&q=80&w=800',
+        location: 'Montreal, Quebec',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Telecommunications'
+      },
+      {
+        id: 'media-rogers-communications',
+        name: 'Rogers Communications',
+        description: 'A Toronto-based communications and media company.',
+        url: 'https://www.rogers.com',
+        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk?auto=format&fit=crop&q=80&w=800',
+        location: 'Toronto, Ontario',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Telecommunications'
+      },
+      {
+        id: 'media-telus',
+        name: 'Telus Corporation',
+        description: 'A Vancouver-based telecommunications company.',
+        url: 'https://www.telus.com',
+        image: 'https://images.unsplash.com/photo-5QgIuuBxKwM',
+        location: 'Vancouver, British Columbia',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Telecommunications'
       }
     ];
 

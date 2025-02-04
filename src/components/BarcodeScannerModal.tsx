@@ -3,11 +3,11 @@ import { X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import jsQR from 'jsqr';
 
-interface ProductScannerModalProps {
+interface BarcodeScannerModalProps {
   onClose: () => void;
 }
 
-export default function ProductScannerModal({ onClose }: ProductScannerModalProps) {
+export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProps) {
   const { t } = useLanguage();
   const [scanResult, setScanResult] = useState<string | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -102,7 +102,7 @@ export default function ProductScannerModal({ onClose }: ProductScannerModalProp
                 window.open(`https://www.google.com/search?q=${code.data}`, '_blank');
                 setUploadStatus(null);
               } else {
-                setScanResult('No barcode detected in the image. Please try again.');
+                setScanResult('No barcode detected in the image. Performing image search...');
                 // Perform Google Image Search
                 const imageUrl = event.target?.result as string;
                 window.open(`https://www.google.com/searchbyimage?image_url=${encodeURIComponent(imageUrl)}`, '_blank');
@@ -164,7 +164,7 @@ export default function ProductScannerModal({ onClose }: ProductScannerModalProp
           </label>
           <input
             type="file"
-            accept="image/*"
+            accept="image/png, image/jpeg, image/jpg, image/webp"
             onChange={handleImageUpload}
             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
           />

@@ -46,6 +46,20 @@ import { Store } from '../../types';
         isCanadianMajorityInvested: true,
         isForeignMajorityInvested: false,
         type: 'Conglomerate'
+      },
+      {
+        id: 'conglomerate-canadian-tire',
+        name: 'Canadian Tire Corporation',
+        description: 'A Canadian retail company with a wide range of products and services.',
+        url: 'https://www.canadiantire.ca',
+        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk?auto=format&fit=crop&q=80&w=800',
+        location: 'Toronto, Ontario',
+        isCorporate: true,
+        isFranchise: true,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Conglomerate'
       }
     ];
 

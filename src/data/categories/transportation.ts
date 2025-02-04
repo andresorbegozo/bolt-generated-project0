@@ -354,6 +354,20 @@ import { Store } from '../../types';
         isCanadianMajorityInvested: true,
         isForeignMajorityInvested: false,
         type: 'Automotive'
+      },
+      {
+        id: 'transport-cycle-air',
+        name: 'Cycle Air',
+        description: 'A Toronto-based company specializing in air transportation services.',
+        url: 'https://www.cycleair.com',
+        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk?auto=format&fit=crop&q=80&w=800',
+        location: 'Toronto, Ontario',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Transportation'
       }
     ];
 

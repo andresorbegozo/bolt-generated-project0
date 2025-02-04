@@ -112,5 +112,19 @@ export const snackStores: Store[] = [
     isCanadianMajorityInvested: true,
     isForeignMajorityInvested: false,
     type: 'Snacks'
+  },
+  {
+    id: 'food-ganong',
+    name: 'Ganong Bros., Limited',
+    description: 'A St. Stephen-based chocolate and confectionary company.',
+    url: 'https://www.ganong.com',
+    image: 'https://images.unsplash.com/photo-1ddol8rgUH8',
+    location: 'St. Stephen, New Brunswick',
+    isCorporate: true,
+    isFranchise: false,
+    isCanadianOwned: true,
+    isCanadianMajorityInvested: true,
+    isForeignMajorityInvested: false,
+    type: 'Snacks'
   }
 ];

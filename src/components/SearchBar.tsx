@@ -37,7 +37,7 @@ export default function SearchBar({ onSearch, suggestions }: SearchBarProps) {
   const handleInputBlur = () => {
     if (query === '') {
       setQuery("I'm looking for...");
-      onSearch(''); // Trigger search with empty query
+      onSearch('');
     }
     setTimeout(() => setShowSuggestions(false), 100);
   };

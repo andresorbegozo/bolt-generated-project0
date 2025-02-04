@@ -158,6 +158,20 @@ import { Store } from '../../types';
         isCanadianMajorityInvested: true,
         isForeignMajorityInvested: false,
         type: 'Software'
+      },
+      {
+        id: 'tech-blackberry',
+        name: 'BlackBerry Limited',
+        description: 'A Waterloo-based software and cybersecurity company.',
+        url: 'https://www.blackberry.com',
+        image: 'https://images.unsplash.com/photo-3OZrQ6g4zVk?auto=format&fit=crop&q=80&w=800',
+        location: 'Waterloo, Ontario',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Software'
       }
     ];
 

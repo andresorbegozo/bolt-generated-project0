@@ -326,6 +326,20 @@ import { Store } from '../../types';
         isCanadianMajorityInvested: true,
         isForeignMajorityInvested: false,
         type: 'Clothing'
+      },
+      {
+        id: 'home-four-seasons',
+        name: 'Four Seasons Hotels and Resorts',
+        description: 'A Toronto-based luxury hotel and resort company.',
+        url: 'https://www.fourseasons.com',
+        image: 'https://unsplash.com/photos/1ddol8rgUH8',
+        location: 'Toronto, Ontario',
+        isCorporate: true,
+        isFranchise: false,
+        isCanadianOwned: true,
+        isCanadianMajorityInvested: true,
+        isForeignMajorityInvested: false,
+        type: 'Hospitality'
       }
     ];
 
