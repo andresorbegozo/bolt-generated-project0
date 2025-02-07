@@ -23,7 +23,7 @@ export default function BusinessFilters({
   const buttonWidth = `calc(100% / ${buttonCount})`;
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50/50 backdrop-blur-sm sticky top-0 z-40">
+    <div className="bg-gradient-to-b from-white to-gray-50/50 backdrop-blur-sm sticky top-0 z-40 pt-2"> {/* Added pt-2 to create space */}
       <div className="max-w-2xl mx-auto py-4 md:py-6 px-3 md:px-4">
         <div className="flex flex-col gap-3">
           <div className="flex flex-wrap justify-center gap-3">

@@ -15,7 +15,7 @@ export default function CategoryGrid({ title, stores }: CategoryGridProps) {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-  const [dragThreshold] = useState(5);
+  const [dragThreshold, setDragThreshold] = useState(5);
   const [hasMoved, setHasMoved] = useState(false);
 
   const checkScroll = () => {
@@ -145,7 +145,7 @@ export default function CategoryGrid({ title, stores }: CategoryGridProps) {
         </span>
       </h2>
       
-      <div className="relative px-4">
+      <div className="relative px-4 pt-2"> {/* Added pt-2 to create space */}
         {showLeftScroll && (
           <div className="absolute left-0 top-0 bottom-4 w-12 z-[1] pointer-events-none"
             style={{
