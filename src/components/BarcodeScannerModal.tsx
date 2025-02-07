@@ -1,19 +1,59 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
 import jsQR from 'jsqr';
+import Quagga from 'quagga';
 
 interface BarcodeScannerModalProps {
   onClose: () => void;
 }
 
 export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProps) {
-  const { t } = useLanguage();
   const [scanResult, setScanResult] = useState<string | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [cameraActive, setCameraActive] = useState(false);
   const [uploadStatus, setUploadStatus] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (cameraActive && videoRef.current) {
+      Quagga.init({
+        inputStream: {
+          name: "Live",
+          type: "LiveStream",
+          target: videoRef.current,
+          constraints: {
+            width: 640,
+            height: 480,
+            facingMode: "environment"
+          }
+        },
+        decoder: {
+          readers: ["ean_reader", "code_128_reader"]
+        }
+      }, (err) => {
+        if (err) {
+          console.error("QuaggaJS initialization error:", err);
+          return;
+        }
+        Quagga.start();
+      });
+
+      Quagga.onDetected((data) => {
+        if (data.codeResult && data.codeResult.code) {
+          const barcode = data.codeResult.code;
+          setScanResult(`UPC Scanned: ${barcode}`);
+          window.open(`https://www.google.com/search?q=${barcode}`, '_blank');
+          Quagga.stop();
+          setCameraActive(false);
+        }
+      });
+
+      return () => {
+        Quagga.offDetected();
+        Quagga.stop();
+      };
+    }
+  }, [cameraActive]);
 
   const handleStartCamera = async () => {
     try {
@@ -33,11 +73,11 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
       stream.getTracks().forEach(track => track.stop());
       videoRef.current.srcObject = null;
       setCameraActive(false);
+      Quagga.stop();
     }
   };
 
   const analyzeBarcode = (barcode: string): string => {
-    // Placeholder for basic analysis logic
     const barcodeLower = barcode.toLowerCase();
     let canadianOwned = 'No';
     let canadianHeadquartered = 'No';
@@ -55,29 +95,6 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
     }
 
     return `Canadian Owned: ${canadianOwned}, Canadian Headquartered: ${canadianHeadquartered}, Canadian Majority Invested: ${canadianMajorityInvested}, Production in Canada: ${productionInCanada}`;
-  };
-
-  const handleScan = () => {
-    if (videoRef.current && canvasRef.current) {
-      const video = videoRef.current;
-      const canvas = canvasRef.current;
-      const context = canvas.getContext('2d');
-
-      if (context) {
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-        const code = jsQR(imageData.data, imageData.width, imageData.height);
-
-        if (code) {
-          setScanResult(`Barcode scanned: ${code.data}`);
-          window.open(`https://www.google.com/search?q=${code.data}`, '_blank');
-        } else {
-          setScanResult('No barcode detected. Please try again.');
-        }
-      }
-    }
   };
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -98,12 +115,12 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
               const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
               const code = jsQR(imageData.data, imageData.width, imageData.height);
               if (code) {
-                setScanResult(`Barcode scanned: ${code.data}`);
+                const analysisResult = analyzeBarcode(code.data);
+                setScanResult(`Barcode scanned: ${code.data}<br/>${analysisResult}`);
                 window.open(`https://www.google.com/search?q=${code.data}`, '_blank');
                 setUploadStatus(null);
               } else {
                 setScanResult('No barcode detected in the image. Performing image search...');
-                // Perform Google Image Search
                 const imageUrl = event.target?.result as string;
                 window.open(`https://www.google.com/searchbyimage?image_url=${encodeURIComponent(imageUrl)}`, '_blank');
                 setUploadStatus(null);
@@ -149,12 +166,6 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
           <div className="mb-4">
             <video ref={videoRef} autoPlay playsInline className="w-full aspect-video bg-gray-100 rounded-md"></video>
             <canvas ref={canvasRef} className="hidden"></canvas>
-            <button
-              onClick={handleScan}
-              className="mt-2 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors duration-200"
-            >
-              Scan Product
-            </button>
           </div>
         )}
 
@@ -175,8 +186,7 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
           </div>
         )}
         {scanResult && (
-          <div className="mt-4 p-4 bg-gray-100 rounded-md">
-            <p className="text-gray-700">{scanResult}</p>
+          <div className="mt-4 p-4 bg-gray-100 rounded-md" dangerouslySetInnerHTML={{ __html: scanResult }}>
           </div>
         )}
       </div>
