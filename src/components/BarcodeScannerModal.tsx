@@ -13,6 +13,7 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [cameraActive, setCameraActive] = useState(false);
   const [uploadStatus, setUploadStatus] = useState<string | null>(null);
+  const [cameraError, setCameraError] = useState<string | null>(null);
 
   useEffect(() => {
     if (cameraActive && videoRef.current) {
@@ -24,7 +25,7 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
           constraints: {
             width: 640,
             height: 480,
-            facingMode: "environment"
+            facingMode: "environment" // Use 'environment' for back camera on mobile
           }
         },
         decoder: {
@@ -33,6 +34,7 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
       }, (err) => {
         if (err) {
           console.error("QuaggaJS initialization error:", err);
+          setCameraError(`QuaggaJS initialization error: ${err.message}`);
           return;
         }
         Quagga.start();
@@ -56,14 +58,17 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
   }, [cameraActive]);
 
   const handleStartCamera = async () => {
+    setCameraError(null);
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
         setCameraActive(true);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error accessing camera:', error);
+      setCameraError(`Error accessing camera: ${error.message}`);
+      setCameraActive(false);
     }
   };
 
@@ -113,7 +118,7 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
               canvas.height = img.height;
               context.drawImage(img, 0, 0, img.width, img.height);
               const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-              const code = jsQR(imageData.data, imageData.width, imageData.height);
+              const code = jsQR(imageData.data, imageData.width, canvas.height);
               if (code) {
                 const analysisResult = analyzeBarcode(code.data);
                 setScanResult(`Barcode scanned: ${code.data}<br/>${analysisResult}`);
@@ -161,6 +166,12 @@ export default function BarcodeScannerModal({ onClose }: BarcodeScannerModalProp
             </button>
           )}
         </div>
+
+        {cameraError && (
+          <div className="text-red-500 mb-4">
+            {cameraError}
+          </div>
+        )}
 
         {cameraActive && (
           <div className="mb-4">
